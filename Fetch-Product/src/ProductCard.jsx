@@ -17,26 +17,26 @@ useEffect(()=>{
     .catch(()=>setloading(false));
 },[]);
 
+if (loading) {
+  return <p>Loading...</p>;
+}
+
 return (
-    <>
-    {loading ? (
-      <p>Loading...</p>
-    ) : (
-      <>
-      <div>
-        {product.map((item)=>(
-            <div key={item.id}>
-                <img src={item.image} alt={item.title} width="100" />
-                <h3>{item.title}</h3>
-                <p>${item.price}</p>
-                <p>{item.description.slice(0,100)}...</p>
-            </div>
-        ))}
+  <>
+  <h1 id="heading">Product Card</h1>
+  <div>
+    {product.map((item) => (
+      <div key={item.id}>
+        <img src={item.image} alt={item.title} />
+        <h3>{item.title}</h3>
+        <p>${item.price}</p>
+        <p>{item.description.slice(0, 100)}...</p>
       </div>
-      </>
-    )}
-    </>
-)
+    ))}
+  </div>
+  </>
+);
+
 };
 
 export default ProductCard;
