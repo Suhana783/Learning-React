@@ -18,16 +18,34 @@
 
 // 2. Task: Create a Login System using Context API.
 
+// import React from 'react';
+// import {AuthProvider} from './Auth/AuthContext.jsx';
+// import LoginComponent from './Auth/LoginComponent.jsx';
+
+// function App () {
+//   return (
+//     <AuthProvider>
+//       <LoginComponent />
+//     </AuthProvider>
+//   );
+// }
+
+// export default App;
+
+
+// 3.Task:Create a “Language Selector” using Context API
+
 import React from 'react';
-import {AuthProvider} from './Auth-Context/AuthContext.jsx';
-import LoginComponent from './Auth-Context/LoginComponent.jsx';
+import { LanguageProvider } from './Language/LanguageContext';
+import LanguageSelector from './Language/LanguageSelector';
+
 
 function App () {
   return (
-    <AuthProvider>
-      <LoginComponent />
-    </AuthProvider>
-  );
-}
+    <LanguageProvider>
+      <LanguageSelector />
+    </LanguageProvider>
+  )
+};
 
 export default App;
