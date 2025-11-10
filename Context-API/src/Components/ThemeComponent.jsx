@@ -1,5 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import { ThemeContext } from "./ThemeContext";
+import './Theme.css';
 
 function ThemeComponent() {
   const { color, setColor } = useContext(ThemeContext);
@@ -9,9 +10,9 @@ function ThemeComponent() {
   }, [color]);
 
   return (
-    <div style={{ textAlign: "center", paddingTop: "50px" }}>
+    <div className="theme-container">
       <h1>Theme Changer using Context API</h1>
-      <div style={{ marginTop: "20px" }}>
+      <div className="buttons">
         <button onClick={() => setColor("lightblue")}>Blue</button>
         <button onClick={() => setColor("lightpink")}>Pink</button>
         <button onClick={() => setColor("lightgreen")}>Green</button>

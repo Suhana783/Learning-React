@@ -1,0 +1,198 @@
+/* Reset and body styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: background-color 0.5s ease;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Main container - now invisible */
+.theme-container {
+  text-align: center;
+  padding: 40px;
+  background: transparent;
+  max-width: 600px;
+  width: 90%;
+}
+
+/* Heading styling - single line, no animation, top position */
+h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  background: linear-gradient(45deg, #667eea, #764ba2, #f093fb, #f5576c);
+  background-size: 100% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+
+/* Buttons container - visible with glassmorphism */
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Button styling */
+button {
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  min-width: 100px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s;
+}
+
+button:hover::before {
+  left: 100%;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Individual button colors */
+button:nth-child(1) {
+  background: linear-gradient(135deg, #74b9ff, #0984e3);
+  color: white;
+}
+
+button:nth-child(1):hover {
+  background: linear-gradient(135deg, #0984e3, #74b9ff);
+}
+
+button:nth-child(2) {
+  background: linear-gradient(135deg, #fd79a8, #e84393);
+  color: white;
+}
+
+button:nth-child(2):hover {
+  background: linear-gradient(135deg, #e84393, #fd79a8);
+}
+
+button:nth-child(3) {
+  background: linear-gradient(135deg, #00b894, #00cec9);
+  color: white;
+}
+
+button:nth-child(3):hover {
+  background: linear-gradient(135deg, #00cec9, #00b894);
+}
+
+button:nth-child(4) {
+  background: linear-gradient(135deg, #2d3436, #636e72);
+  color: white;
+}
+
+button:nth-child(4):hover {
+  background: linear-gradient(135deg, #636e72, #2d3436);
+}
+
+button:nth-child(5) {
+  background: linear-gradient(135deg, #ddd, #fff);
+  color: #2d3436;
+  border: 2px solid #ddd;
+}
+
+button:nth-child(5):hover {
+  background: linear-gradient(135deg, #fff, #f1f2f6);
+  border-color: #74b9ff;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .theme-container {
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+  
+  .buttons {
+    flex-direction: column;
+    gap: 12px;
+    padding: 25px;
+  }
+  
+  button {
+    width: 100%;
+    max-width: 200px;
+    padding: 14px 24px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  
+  button {
+    font-size: 14px;
+    padding: 12px 20px;
+  }
+}
+
+/* Add pulse animation for the buttons container */
+.buttons {
+  animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
