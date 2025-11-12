@@ -1,0 +1,12 @@
+h1{
+    text-align: center;
+}
+
+button {
+    margin-left: 28rem;
+    margin-top: 3rem;
+    padding: 10px 12px;
+    background-color: bisque;
+    color: black;
+    font-weight: bold;
+}

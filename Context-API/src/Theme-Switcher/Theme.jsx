@@ -1,5 +1,6 @@
 import React, {useContext, useEffect} from 'react';
 import { ThemeContext } from './ThemeC.jsx';
+import './Theme-style.css';
 
 function ThemeChanger () {
     const {theme, Toggletheme, color} = useContext(ThemeContext);
