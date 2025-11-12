@@ -100,6 +100,7 @@ option[value=""] {
 button {
   background: linear-gradient(135deg, #ff6b6b, #ee5a52);
   color: white;
+  margin-top: 1rem;
   border: none;
   padding: 12px 30px;
   font-size: 16px;

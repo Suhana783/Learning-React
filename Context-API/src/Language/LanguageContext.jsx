@@ -13,7 +13,7 @@ export const LanguageProvider = ({ children }) => {
   useEffect(() => {
     if (language) {
       setMessage(`Your language preference is saved: ${language}`);
-      const timer = setTimeout(() => setMessage(""), 3000); 
+      const timer = setTimeout(() => setMessage(""), 1000); 
       return () => clearTimeout(timer);
     }
   }, [language]);

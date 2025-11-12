@@ -19,8 +19,8 @@ const LanguageSelector = () => {
       </div>
 
       <button onClick={() => changeLanguage("")}>Reset</button>
-
       {message && <p>{message}</p>}
+      
     </div>
   );
 };

@@ -35,17 +35,34 @@
 
 // 3.Task:Create a “Language Selector” using Context API
 
-import React from 'react';
-import { LanguageProvider } from './Language/LanguageContext';
-import LanguageSelector from './Language/LanguageSelector';
+// import { LanguageProvider } from './Language/LanguageContext';
+// import LanguageSelector from './Language/LanguageSelector';
 
+
+// function App () {
+//   return (
+//     <LanguageProvider>
+//       <LanguageSelector />
+//     </LanguageProvider>
+//   )
+// };
+
+// export default App;
+
+
+// 4. Task: React Theme Switcher using Context API
+
+import { ThemeProvider } from "./Theme-Switcher/ThemeC.jsx";
+import ThemeChanger from "./Theme-Switcher/Theme.jsx";
 
 function App () {
-  return (
-    <LanguageProvider>
-      <LanguageSelector />
-    </LanguageProvider>
-  )
+    return(
+        <>
+        <ThemeProvider>
+            <ThemeChanger/>
+        </ThemeProvider>
+        </>
+    )
 };
 
 export default App;
