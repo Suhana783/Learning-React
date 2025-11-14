@@ -1,19 +1,19 @@
 // 1. Task Name: Theme Changer using Context API
 
-// import React from "react";
-// import { ThemeProvider } from "./Components/ThemeContext";
-// import ThemeComponent from "./Components/ThemeComponent";
+import React from "react";
+import { ThemeProvider } from "./Components/ThemeContext";
+import ThemeComponent from "./Components/ThemeComponent";
 
 
-// function App() {
-//   return(
-//     <ThemeProvider>
-//       <ThemeComponent/>
-//     </ThemeProvider>
-//   );
-// }
+function App() {
+  return(
+    <ThemeProvider>
+      <ThemeComponent/>
+    </ThemeProvider>
+  );
+}
 
-// export default App;
+export default App;
 
 
 // 2. Task: Create a Login System using Context API.
@@ -52,17 +52,17 @@
 
 // 4. Task: React Theme Switcher using Context API
 
-import { ThemeProvider } from "./Theme-Switcher/ThemeC.jsx";
-import ThemeChanger from "./Theme-Switcher/Theme.jsx";
+// import { ThemeProvider } from "./Theme-Switcher/ThemeC.jsx";
+// import ThemeChanger from "./Theme-Switcher/Theme.jsx";
 
-function App () {
-    return(
-        <>
-        <ThemeProvider>
-            <ThemeChanger/>
-        </ThemeProvider>
-        </>
-    )
-};
+// function App () {
+//     return(
+//         <>
+//         <ThemeProvider>
+//             <ThemeChanger/>
+//         </ThemeProvider>
+//         </>
+//     )
+// };
 
-export default App;
+// export default App;
